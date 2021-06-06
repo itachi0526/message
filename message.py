@@ -13,8 +13,23 @@ for d in data:
     sum_len = sum_len + len(d)
 print('留言平均長度是', sum_len/len(data))
 
+# 留言長度小於100
 new = []    
 for d in data:
     if len(d) < 10:
         new.append(len(d))
 print('一共有', len(new), '筆留言長度小於10')
+
+# h這個字在那些留言裡面
+s = []
+for d in data:
+    if 'h' in d:
+        s.append(d)
+print('一共有', len(s), '筆留言提到h')
+
+# 24～28 進階 s = [d for d in data if 'h' in d] 再print
+
+j = ['j' in d for d in data]
+print(j)
+
+# 'j' in d 會有True/ False的結果，所以應該會印出31個布林值     
